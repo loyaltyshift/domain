@@ -1,2 +1,2 @@
-RewriteEngine On
+RewriteEngine Off
 RewriteRule ^(.*)$ https://www.capventis.com/solutions/experience [R=301]
