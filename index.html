@@ -1,10 +1,90 @@
-
 <!DOCTYPE html>
-<html lang="en">
-<meta http-equiv="refresh" content="0; url=https://www.capventis.com/customer-loyalty-intelligence" />
-
-    <head>
+<html lang="en" class="scroll-smooth">
+<head>
     <meta charset="UTF-8">
-    <title>Loyalty Shift Index</title>
-   
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LoyaltyShift | The Intelligence of Movement</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Playfair+Display:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        h1, h2, h3, .serif { font-family: 'Playfair Display', serif; }
+        
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        ::selection { background: #000; color: #fff; }
+    </style>
+</head>
+<body class="bg-white text-zinc-900 selection:bg-black selection:text-white">
+
+    <nav class="fixed top-0 w-full p-8 md:p-12 z-50 flex justify-between items-center mix-blend-difference text-white">
+        <div class="text-xl font-medium tracking-tighter">LoyaltyShift</div>
+        <div class="text-sm tracking-widest uppercase">Intelligence</div>
+    </nav>
+
+    <main>
+        <section class="h-screen flex flex-col justify-center px-8 md:px-24">
+            <h1 class="fade-in text-5xl md:text-8xl font-medium tracking-tight mb-8">
+                Real loyalty isn't <br> a label. It's a direction.
+            </h1>
+            <p class="fade-in text-lg md:text-2xl text-zinc-500 max-w-xl font-light leading-relaxed">
+                Most brands stop at the snapshot. We help you understand the momentum behind every customer, predicting shifts before they happen.
+            </p>
+        </section>
+
+        <section class="px-8 md:px-24 py-32 bg-zinc-50">
+            <div class="max-w-6xl mx-auto">
+                <h2 class="fade-in text-3xl md:text-4xl mb-24 serif italic text-zinc-800">The Intelligence</h2>
+                
+                <div class="grid md:grid-cols-2 gap-24">
+                    <div class="fade-in">
+                        <h3 class="text-2xl font-medium mb-6">Loyalty Shift Index (LSI)</h3>
+                        <p class="text-zinc-600 leading-loose">
+                            Static NPS metrics tell you what a customer feels today, but not how that feeling is evolving. Our Loyalty Shift Index (LSI) quantifies the directional movement of sentiment, acting as an early-warning radar for your brand's retention strategy.
+                        </p>
+                    </div>
+                    <div class="fade-in">
+                        <h3 class="text-2xl font-medium mb-6">Predictive Churn Modeling</h3>
+                        <p class="text-zinc-600 leading-loose">
+                            Using machine learning, we identify the customers quietly drifting from Promoters to Passives. By blending behavioral data with sentiment momentum, we pinpoint revenue at risk and uncover opportunities for timely re-engagement.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="px-8 md:px-24 py-32">
+            <div class="max-w-3xl">
+                <h2 class="fade-in text-4xl md:text-6xl mb-12 tracking-tight">The Architect</h2>
+                <p class="fade-in text-xl text-zinc-600 leading-relaxed mb-8">
+                    Sebastian Fruend is the creator of the Loyalty Shift Index. With a focus on turning static customer data into dynamic, predictive intelligence, he bridges the gap between traditional loyalty measurement and the future of customer retention. Get in touch and say hello ...
+                </p>
+                <a href="https://www.linkedin.com/in/sebastianfruend/" target="_blank" class="fade-in inline-block border-b border-zinc-900 pb-1 hover:text-zinc-500 transition-colors">View Profile &rarr;</a>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+    </script>
+</body>
 </html>
