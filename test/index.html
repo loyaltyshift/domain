@@ -1,1 +1,289 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101c2c">
+  <meta name="description" content="LoyaltyShift: Helping ambitious businesses turn customer experience signals into stronger retention, smarter decisions and lasting loyalty.">
+  <title>Loyalty Shift - Make every customer moment count</title>
+  <style>
+    :root{
+      --ink:#101c2c; --muted:#5e6b7a; --paper:#f7f8f5; --white:#fff;
+      --lime:#c8f169; --lime-dark:#a7d84a; --line:#e3e8e4; --blue:#234b68;
+      --radius:22px; --shadow:0 18px 55px rgba(16,28,44,.10);
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;background:var(--paper);color:var(--ink);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.55}
+    a{color:inherit;text-decoration:none}
+    .wrap{width:min(1160px,calc(100% - 44px));margin:auto}
+    .nav{height:82px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+    .brand{display:flex;align-items:center;gap:10px;font-size:1.15rem;font-weight:800;letter-spacing:-.04em}
+    .brand-mark{width:34px;height:34px;border-radius:11px;background:var(--lime);display:grid;place-items:center;color:var(--ink);font-weight:900;font-size:19px}
+    .navlinks{display:flex;align-items:center;gap:28px;font-size:.92rem;color:#475466}
+    .navlinks a:hover{color:var(--ink)}
+    .button{display:inline-flex;align-items:center;justify-content:center;gap:9px;border-radius:999px;padding:13px 19px;font-weight:750;font-size:.92rem;border:1px solid transparent;transition:transform .2s,background .2s}
+    .button:hover{transform:translateY(-2px)}
+    .button-dark{background:var(--ink);color:white}
+    .button-dark:hover{background:#24364c}
+    .button-light{border-color:#cbd3d7;background:transparent}
+    .button-lime{background:var(--lime);color:var(--ink)}
+    .button-lime:hover{background:#d6f68e}
+    .hero{padding:62px 0 84px;position:relative;overflow:hidden}
+    .hero-grid{display:grid;grid-template-columns:1.06fr .94fr;gap:62px;align-items:center}
+    .eyebrow{display:inline-flex;align-items:center;gap:9px;text-transform:uppercase;letter-spacing:.13em;font-size:.72rem;font-weight:850;color:#4b6540}
+    .eyebrow:before{content:"";width:22px;height:2px;background:var(--lime-dark)}
+    h1{font-size:clamp(3rem,6.4vw,5.8rem);line-height:.99;letter-spacing:-.075em;margin:20px 0 24px;max-width:700px}
+    h1 span{color:#789a42}
+    .hero-copy{font-size:1.13rem;line-height:1.7;color:var(--muted);max-width:550px}
+    .hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin:30px 0 22px}
+    .microcopy{font-size:.82rem;color:#7a8591}
+    .dashboard{background:#132238;border-radius:28px;padding:24px;color:white;box-shadow:0 32px 90px rgba(16,28,44,.22);position:relative}
+    .dash-top{display:flex;align-items:center;justify-content:space-between;padding-bottom:22px;border-bottom:1px solid rgba(255,255,255,.12)}
+    .dash-label{font-size:.78rem;color:#a9b7c7}
+    .live{display:flex;align-items:center;gap:7px;color:#d4f98d;font-size:.76rem;font-weight:700}
+    .live:before{content:"";width:7px;height:7px;background:var(--lime);border-radius:50%}
+    .dash-title{font-size:1.42rem;font-weight:750;letter-spacing:-.04em;margin:23px 0 4px}
+    .dash-sub{font-size:.83rem;color:#a9b7c7}
+    .metric-row{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin:22px 0}
+    .metric{border:1px solid rgba(255,255,255,.12);border-radius:16px;padding:16px;background:rgba(255,255,255,.035)}
+    .metric small{color:#a9b7c7;font-size:.75rem}
+    .metric strong{display:block;font-size:1.8rem;letter-spacing:-.05em;margin:7px 0 1px}
+    .trend{font-size:.74rem;color:#d4f98d}
+    .signal-list{display:grid;gap:10px}
+    .signal{display:flex;gap:12px;align-items:flex-start;padding:12px;border-radius:14px;background:rgba(255,255,255,.055)}
+    .signal-icon{flex:0 0 30px;height:30px;border-radius:10px;background:rgba(200,241,105,.15);color:var(--lime);display:grid;place-items:center;font-weight:800}
+    .signal strong{font-size:.83rem;display:block}
+    .signal span{font-size:.75rem;color:#a9b7c7}
+    .section{padding:88px 0}
+    .section-white{background:white}
+    .section-head{max-width:700px;margin-bottom:38px}
+    .section-head h2{font-size:clamp(2.1rem,4vw,3.45rem);line-height:1.05;letter-spacing:-.065em;margin:14px 0}
+    .section-head p{font-size:1.05rem;color:var(--muted);max-width:620px}
+    .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .card{background:white;border:1px solid var(--line);border-radius:var(--radius);padding:26px;display:flex;flex-direction:column;min-height:300px}
+    .card.featured{background:var(--ink);color:white;border-color:var(--ink)}
+    .card-icon{height:44px;width:44px;border-radius:14px;background:#eef5df;display:grid;place-items:center;font-size:1.2rem;margin-bottom:23px}
+    .featured .card-icon{background:rgba(200,241,105,.16);color:var(--lime)}
+    .card h3{font-size:1.35rem;letter-spacing:-.04em;margin:0 0 10px}
+    .card p{color:var(--muted);font-size:.94rem;margin:0 0 18px}
+    .featured p{color:#b7c2cf}
+    .card ul{padding-left:18px;margin:0 0 24px;color:#536171;font-size:.88rem}
+    .featured ul{color:#c4cfdb}
+    .card li{margin:7px 0}
+    .card .card-link{margin-top:auto;font-weight:800;font-size:.9rem}
+    .featured .card-link{color:var(--lime)}
+    .pricing-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;align-items:stretch}
+    .price-card{padding:27px;border:1px solid var(--line);border-radius:var(--radius);background:white;display:flex;flex-direction:column}
+    .price-card.popular{border:2px solid var(--lime-dark);box-shadow:var(--shadow);position:relative}
+    .popular-tag{position:absolute;top:-13px;left:22px;background:var(--lime);border-radius:99px;padding:5px 10px;font-size:.72rem;font-weight:850}
+    .plan{font-size:.83rem;text-transform:uppercase;letter-spacing:.1em;font-weight:850;color:#617080}
+    .price{font-size:2.6rem;font-weight:850;letter-spacing:-.07em;margin:13px 0 0}
+    .price small{font-size:.85rem;letter-spacing:0;color:#73808d;font-weight:600}
+    .price-desc{font-size:.91rem;color:var(--muted);min-height:48px}
+    .price-card ul{list-style:none;padding:0;margin:17px 0 25px;font-size:.9rem}
+    .price-card li{margin:11px 0;display:flex;gap:9px}
+    .price-card li:before{content:"✓";color:#658a2e;font-weight:900}
+    .price-card .button{margin-top:auto}
+    .note{font-size:.82rem;color:#73808d;margin-top:18px}
+    .process{display:grid;grid-template-columns:repeat(3,1fr);gap:30px}
+    .step-num{width:38px;height:38px;display:grid;place-items:center;border:1px solid #b7c2c8;border-radius:50%;font-weight:850;margin-bottom:20px}
+    .process h3{font-size:1.2rem;margin:0 0 9px;letter-spacing:-.03em}
+    .process p{margin:0;color:var(--muted);font-size:.94rem}
+    .cta{background:var(--lime);border-radius:28px;padding:48px;display:flex;align-items:center;justify-content:space-between;gap:35px}
+    .cta h2{font-size:clamp(2rem,4vw,3.2rem);line-height:1.02;letter-spacing:-.065em;margin:0 0 12px;max-width:640px}
+    .cta p{margin:0;color:#3e5130;max-width:600px}
+    .faq{display:grid;grid-template-columns:.75fr 1.25fr;gap:70px}
+    .faq h2{font-size:2.6rem;letter-spacing:-.06em;line-height:1.05;margin:12px 0}
+    details{padding:20px 0;border-bottom:1px solid var(--line)}
+    summary{font-weight:800;cursor:pointer;list-style:none;display:flex;justify-content:space-between;gap:20px}
+    summary:after{content:"+";font-size:1.3rem;color:#779a42}
+    details[open] summary:after{content:"−"}
+    details p{color:var(--muted);margin:13px 0 0;font-size:.94rem}
+    footer{padding:35px 0;background:var(--ink);color:white}
+    .footer-inner{display:flex;align-items:center;justify-content:space-between;gap:25px}
+    footer .brand-mark{background:var(--lime)}
+    .footer-copy{font-size:.82rem;color:#aab6c3}
+    .footer-links{display:flex;gap:22px;font-size:.85rem;color:#d1d8df}
+    .contact-note{font-size:.8rem;color:#7b8794;margin-top:12px}
+    @media(max-width:850px){
+      .navlinks{display:none}.hero-grid{grid-template-columns:1fr;gap:40px}.hero{padding-top:38px}
+      .cards,.pricing-grid{grid-template-columns:1fr}.card{min-height:auto}.process{grid-template-columns:1fr;gap:28px}
+      .cta{padding:32px;align-items:flex-start;flex-direction:column}.faq{grid-template-columns:1fr;gap:20px}
+    }
+    @media(max-width:520px){.wrap{width:min(100% - 30px,1160px)}.nav{height:70px}.hero{padding-bottom:55px}
+      .hero-actions .button{width:100%}.dashboard{padding:17px}.metric strong{font-size:1.5rem}.section{padding:62px 0}
+      .cta{padding:25px}.footer-inner{align-items:flex-start;flex-direction:column}.footer-links{flex-wrap:wrap}
+    }
+  </style>
+</head>
+<body>
+  <header class="wrap">
+    <nav class="nav" aria-label="Main navigation">
+      <a class="brand" href="#" aria-label="LoyaltyShift home"><span class="brand-mark">↗</span><span>Loyalty Shift<span style="color:#789a42">.</span></span></a>
+      <div class="navlinks">
+        <a href="#offerings">What we do</a><a href="#how-it-works">How it works</a><a href="#pricing">Pricing</a><a href="#faq">FAQs</a>
+      </div>
+      <a class="button button-dark" href="#contact">Book a discovery call <span aria-hidden="true">↗</span></a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="wrap hero-grid">
+        <div>
+          <div class="eyebrow">Customer experience, made actionable</div>
+          <h1>Make every customer moment <span>count.</span></h1>
+          <p class="hero-copy">We help growing businesses spot customer friction, understand what people are really saying, and turn insight into practical actions — with a smarter mix of CX expertise and AI.</p>
+          <div class="hero-actions">
+            <a class="button button-dark" href="#contact">Get your CX snapshot <span aria-hidden="true">→</span></a>
+            <a class="button button-light" href="#offerings">Explore the offerings</a>
+          </div>
+          <div class="microcopy">Practical insight. Clear priorities. No enterprise-sized project required.</div>
+        </div>
+        <div class="dashboard" aria-label="Illustrative customer experience insights dashboard">
+          <div class="dash-top"><div><div class="dash-label">LOYALTY SHIFT INTELLIGENCE</div><strong>Weekly CX pulse</strong></div><div class="live">Illustrative preview</div></div>
+          <div class="dash-title">Your customer signals, decoded.</div>
+          <div class="dash-sub">A sample of what a useful weekly briefing could surface.</div>
+          <div class="metric-row">
+            <div class="metric"><small>Review themes</small><strong>04</strong><span class="trend">Patterns to explore</span></div>
+            <div class="metric"><small>Priority actions</small><strong>03</strong><span class="trend">Ready for your team</span></div>
+          </div>
+          <div class="signal-list">
+            <div class="signal"><div class="signal-icon">↗</div><div><strong>Customers mention slow replies</strong><span>Recurring theme across recent feedback</span></div></div>
+            <div class="signal"><div class="signal-icon">◎</div><div><strong>A journey step may be causing drop-off</strong><span>Review the booking or enquiry path</span></div></div>
+            <div class="signal"><div class="signal-icon">✦</div><div><strong>One quick win to test this week</strong><span>Clarify response times and next steps</span></div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-white" id="offerings">
+      <div class="wrap">
+        <div class="section-head">
+          <div class="eyebrow">What we do</div>
+          <h2>From customer signals to smarter decisions.</h2>
+          <p>Choose a focused starting point or build towards continuous insight. Every offer is designed to make customer experience easier to understand — and easier to improve.</p>
+        </div>
+        <div class="cards">
+          <article class="card">
+            <div class="card-icon">⌕</div>
+            <h3>AI CX Snapshot</h3>
+            <p>A practical one-off review of your digital customer journey, public feedback and obvious points of friction.</p>
+            <ul><li>Website and journey review</li><li>Feedback themes and friction points</li><li>Prioritised action plan</li></ul>
+            <a class="card-link" href="#pricing">Explore snapshot pricing →</a>
+          </article>
+          <article class="card featured">
+            <div class="card-icon">◉</div>
+            <h3>CX Monitor</h3>
+            <p>A recurring intelligence briefing to help you keep an eye on customer feedback and emerging issues.</p>
+            <ul><li>Scheduled feedback summaries</li><li>Recurring themes and changes</li><li>Clear recommended next steps</li></ul>
+            <a class="card-link" href="#pricing">Explore monthly monitoring →</a>
+          </article>
+          <article class="card">
+            <div class="card-icon">✳</div>
+            <h3>CX Advisory</h3>
+            <p>Senior, hands-on guidance when you need help turning insight into a better customer experience.</p>
+            <ul><li>Expert review and interpretation</li><li>Workshop or leadership session</li><li>Support with an improvement roadmap</li></ul>
+            <a class="card-link" href="#contact">Discuss advisory support →</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="pricing">
+      <div class="wrap">
+        <div class="section-head">
+          <div class="eyebrow">Straightforward starting points</div>
+          <h2>Start small. Learn fast. Improve continuously.</h2>
+          <p>Indicative launch pricing to help you choose a first step. We’ll confirm scope before any work begins.</p>
+        </div>
+        <div class="pricing-grid">
+          <article class="price-card">
+            <div class="plan">One-off</div>
+            <div class="price">€199 <small>/ review</small></div>
+            <p class="price-desc">For a business that wants a clearer view of its customer experience.</p>
+            <ul><li>Focused digital CX snapshot</li><li>Key friction points and themes</li><li>Prioritised recommendations</li><li>Short online walkthrough</li></ul>
+            <a class="button button-light" href="#contact">Request a snapshot</a>
+          </article>
+          <article class="price-card popular">
+            <span class="popular-tag">Recommended starting point</span>
+            <div class="plan">Monthly</div>
+            <div class="price">€79 <small>/ month</small></div>
+            <p class="price-desc">For teams that want a regular pulse on public feedback and customer friction.</p>
+            <ul><li>Scheduled CX briefing</li><li>Review-theme summaries, where accessible</li><li>Changes and patterns to investigate</li><li>Practical suggested actions</li></ul>
+            <a class="button button-dark" href="#contact">Discuss monitoring</a>
+          </article>
+          <article class="price-card">
+            <div class="plan">Bespoke</div>
+            <div class="price">Let's talk</div>
+            <p class="price-desc">For a more complex challenge or a team that needs expert input.</p>
+            <ul><li>Tailored scope and objectives</li><li>Human-led interpretation</li><li>Workshop or advisory session</li><li>Improvement roadmap options</li></ul>
+            <a class="button button-light" href="#contact">Discuss your needs</a>
+          </article>
+        </div>
+        <p class="note">Pricing is indicative and shown before any applicable taxes. Monitoring depends on available public data and source access. LoyaltyShift does not claim to guarantee business outcomes.</p>
+      </div>
+    </section>
+
+    <section class="section section-white" id="how-it-works">
+      <div class="wrap">
+        <div class="section-head">
+          <div class="eyebrow">How it works</div>
+          <h2>Useful insight, without the consulting theatre.</h2>
+          <p>A clear process that keeps the focus on business priorities — not dashboards for dashboard’s sake.</p>
+        </div>
+        <div class="process">
+          <div><div class="step-num">01</div><h3>Choose the question</h3><p>Tell us what you want to understand: customer feedback, a digital journey, recurring friction or a retention challenge.</p></div>
+          <div><div class="step-num">02</div><h3>Analyse the signals</h3><p>We combine structured frameworks, available data and AI-assisted analysis, with human review where appropriate.</p></div>
+          <div><div class="step-num">03</div><h3>Act on the insight</h3><p>You receive clear priorities and practical next steps. For ongoing monitoring, we help you keep the signal in view.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap">
+        <div class="cta">
+          <div><h2>Find the customer friction you can actually fix.</h2><p>Start with a conversation about your business, your customers and the decisions you need to make next.</p></div>
+          <a class="button button-dark" href="#contact">Let's talk <span aria-hidden="true">↗</span></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-white" id="faq">
+      <div class="wrap faq">
+        <div><div class="eyebrow">Good to know</div><h2>A few questions, answered.</h2><p style="color:var(--muted)">Not sure which option fits? Start with a short conversation and we’ll work out the smallest useful next step.</p></div>
+        <div>
+          <details><summary>Is this a fully automated AI service?</summary><p>Not necessarily. The aim is to automate repeatable collection and summarisation where practical, while keeping human judgement in the loop for interpretation and recommendations. The exact level of automation depends on the sources and scope.</p></details>
+          <details><summary>What kind of businesses is LoyaltyShift for?</summary><p>We’re initially focused on customer-facing businesses that want a more structured view of feedback and customer journeys. The best fit depends on the volume and accessibility of your customer signals.</p></details>
+          <details><summary>Do you need access to our customer database?</summary><p>Not for a public-data snapshot. Any work involving private customer data or connected systems would be scoped separately, with appropriate permissions, security and privacy safeguards.</p></details>
+          <details><summary>Can you promise more loyalty or revenue?</summary><p>No responsible review can promise a specific outcome. We aim to identify evidence-based opportunities and practical improvements, then help you decide what to test and measure.</p></details>
+          <details><summary>How do we get started?</summary><p>Use the contact section below to tell us a little about your business and what you want to improve. We’ll respond with a suggested next step.</p></details>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="contact" style="padding-top:20px">
+      <div class="wrap">
+        <div class="section-head">
+          <div class="eyebrow">Start a conversation</div>
+          <h2>What would you like to improve?</h2>
+          <p>This demo site uses a simple email-based contact link. Replace the placeholder address with your preferred business email before publishing.</p>
+          <a class="button button-dark" href="mailto:hello@loyaltyshift.com?subject=LoyaltyShift%20enquiry&body=Hi%20LoyaltyShift%2C%0A%0AI%27d%20like%20to%20discuss%3A%0A%0ABusiness%3A%0AMain%20challenge%3A%0A%0AThanks">Email LoyaltyShift <span aria-hidden="true">↗</span></a>
+          <div class="contact-note">Placeholder contact: hello@loyaltyshift.com — confirm that this mailbox exists before launch.</div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap footer-inner">
+      <a class="brand" href="#"><span class="brand-mark">↗</span><span>Loyalty Shift<span style="color:var(--lime)">.</span></span></a>
+      <div class="footer-copy">© <span id="year">2026</span> Loyalty Shift. Customer experience, made actionable.</div>
+      <div class="footer-links"><a href="#offerings">Offerings</a><a href="#pricing">Pricing</a><a href="#contact">Contact</a></div>
+    </div>
+  </footer>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
 
