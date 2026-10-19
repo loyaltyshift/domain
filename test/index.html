@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#101c2c">
+  <meta name="theme-color" content="#f5efe5">
   <meta name="description" content="LoyaltyShift: Helping ambitious businesses turn customer experience signals into stronger retention, smarter decisions and lasting loyalty.">
   <title>Loyalty Shift - Make every customer moment count</title>
   <style>
@@ -25,20 +25,20 @@
     .button{display:inline-flex;align-items:center;justify-content:center;gap:9px;border-radius:999px;padding:13px 19px;font-weight:750;font-size:.92rem;border:1px solid transparent;transition:transform .2s,background .2s}
     .button:hover{transform:translateY(-2px)}
     .button-dark{background:var(--ink);color:white}
-    .button-dark:hover{background:#24364c}
+    .button-dark:hover{background:#40564d}
     .button-light{border-color:#cbd3d7;background:transparent}
     .button-lime{background:var(--lime);color:var(--ink)}
     .button-lime:hover{background:#d6f68e}
     .hero{padding:62px 0 84px;position:relative;overflow:hidden}
     .hero-grid{display:grid;grid-template-columns:1.06fr .94fr;gap:62px;align-items:center}
-    .eyebrow{display:inline-flex;align-items:center;gap:9px;text-transform:uppercase;letter-spacing:.13em;font-size:.72rem;font-weight:850;color:#4b6540}
+    .eyebrow{display:inline-flex;align-items:center;gap:9px;text-transform:uppercase;letter-spacing:.13em;font-size:.72rem;font-weight:850;color:#657b4e}
     .eyebrow:before{content:"";width:22px;height:2px;background:var(--lime-dark)}
     h1{font-size:clamp(3rem,6.4vw,5.8rem);line-height:.99;letter-spacing:-.075em;margin:20px 0 24px;max-width:700px}
-    h1 span{color:#789a42}
+    h1 span{color:#718d4f}
     .hero-copy{font-size:1.13rem;line-height:1.7;color:var(--muted);max-width:550px}
     .hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin:30px 0 22px}
     .microcopy{font-size:.82rem;color:#7a8591}
-    .dashboard{background:#132238;border-radius:28px;padding:24px;color:white;box-shadow:0 32px 90px rgba(16,28,44,.22);position:relative}
+    .dashboard{background:#334841;border-radius:28px;padding:24px;color:#fffdf8;box-shadow:0 32px 90px rgba(47,63,53,.16);position:relative}
     .dash-top{display:flex;align-items:center;justify-content:space-between;padding-bottom:22px;border-bottom:1px solid rgba(255,255,255,.12)}
     .dash-label{font-size:.78rem;color:#a9b7c7}
     .live{display:flex;align-items:center;gap:7px;color:#d4f98d;font-size:.76rem;font-weight:700}
@@ -54,25 +54,36 @@
     .signal{display:flex;gap:12px;align-items:flex-start;padding:12px;border-radius:14px;background:rgba(255,255,255,.055)}
     .signal-icon{flex:0 0 30px;height:30px;border-radius:10px;background:rgba(200,241,105,.15);color:var(--lime);display:grid;place-items:center;font-weight:800}
     .signal strong{font-size:.83rem;display:block}
-    .signal span{font-size:.75rem;color:#a9b7c7}
+    .signal span{font-size:.75rem;color:#d0d9d0}
+    .topic-panel{border:1px solid rgba(255,255,255,.16);border-radius:16px;padding:15px;margin:18px 0;background:rgba(255,255,255,.055)}
+    .topic-heading{font-size:.82rem;font-weight:800;margin-bottom:13px}
+    .topic{display:grid;grid-template-columns:1.25fr 1fr 35px;gap:9px;align-items:center;margin:11px 0;font-size:.72rem;color:#e6ebe3}
+    .topic b{text-align:right;font-size:.72rem;color:#fffdf8}
+    .topic-track{height:7px;border-radius:99px;background:rgba(255,255,255,.16);overflow:hidden}
+    .topic-track i{display:block;height:100%;border-radius:99px;background:#d6e7a0}
+    .topic-track.concern i{background:#e8b68a}
+    .metric{border-color:rgba(255,255,255,.17);background:rgba(255,255,255,.06)}
+    .metric small,.dash-sub,.dash-label{color:#d0d9d0}
+    .trend{color:#e0edbd}
+    .signal{background:rgba(255,255,255,.075)}
     .section{padding:88px 0}
-    .section-white{background:white}
+    .section-white{background:#fffdf9}
     .section-head{max-width:700px;margin-bottom:38px}
     .section-head h2{font-size:clamp(2.1rem,4vw,3.45rem);line-height:1.05;letter-spacing:-.065em;margin:14px 0}
     .section-head p{font-size:1.05rem;color:var(--muted);max-width:620px}
     .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
     .card{background:white;border:1px solid var(--line);border-radius:var(--radius);padding:26px;display:flex;flex-direction:column;min-height:300px}
-    .card.featured{background:var(--ink);color:white;border-color:var(--ink)}
+    .card.featured{background:#e8eee2;color:var(--ink);border-color:#dbe5d3}
     .card-icon{height:44px;width:44px;border-radius:14px;background:#eef5df;display:grid;place-items:center;font-size:1.2rem;margin-bottom:23px}
-    .featured .card-icon{background:rgba(200,241,105,.16);color:var(--lime)}
+    .featured .card-icon{background:#d4e2c4;color:#536d3d}
     .card h3{font-size:1.35rem;letter-spacing:-.04em;margin:0 0 10px}
     .card p{color:var(--muted);font-size:.94rem;margin:0 0 18px}
-    .featured p{color:#b7c2cf}
+    .featured p{color:#5e6b61}
     .card ul{padding-left:18px;margin:0 0 24px;color:#536171;font-size:.88rem}
-    .featured ul{color:#c4cfdb}
+    .featured ul{color:#536359}
     .card li{margin:7px 0}
     .card .card-link{margin-top:auto;font-weight:800;font-size:.9rem}
-    .featured .card-link{color:var(--lime)}
+    .featured .card-link{color:#607a43}
     .pricing-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;align-items:stretch}
     .price-card{padding:27px;border:1px solid var(--line);border-radius:var(--radius);background:white;display:flex;flex-direction:column}
     .price-card.popular{border:2px solid var(--lime-dark);box-shadow:var(--shadow);position:relative}
@@ -100,12 +111,21 @@
     summary:after{content:"+";font-size:1.3rem;color:#779a42}
     details[open] summary:after{content:"−"}
     details p{color:var(--muted);margin:13px 0 0;font-size:.94rem}
-    footer{padding:35px 0;background:var(--ink);color:white}
+    footer{padding:35px 0;background:#334841;color:#fffdf8}
     .footer-inner{display:flex;align-items:center;justify-content:space-between;gap:25px}
     footer .brand-mark{background:var(--lime)}
-    .footer-copy{font-size:.82rem;color:#aab6c3}
-    .footer-links{display:flex;gap:22px;font-size:.85rem;color:#d1d8df}
+    .footer-copy{font-size:.82rem;color:#d5ded5}
+    .footer-links{display:flex;gap:22px;font-size:.85rem;color:#eef0e9}
     .contact-note{font-size:.8rem;color:#7b8794;margin-top:12px}
+    .contact-form{max-width:720px;display:grid;gap:15px}
+    .form-grid{display:grid;grid-template-columns:1fr 1fr;gap:15px}
+    .contact-form label{display:grid;gap:7px;font-size:.88rem;font-weight:750;color:#435148}
+    .contact-form input,.contact-form textarea{width:100%;font:inherit;font-weight:400;color:var(--ink);background:#fffdf9;border:1px solid #dcd7cb;border-radius:12px;padding:12px 14px;outline-offset:3px}
+    .contact-form input:focus,.contact-form textarea:focus{border-color:#8da36c}
+    .contact-form textarea{resize:vertical}
+    .form-actions{display:flex;gap:10px;flex-wrap:wrap}
+    .form-actions button{cursor:pointer}
+    #form-status{margin:0;padding:11px 13px;border-radius:10px;background:#f2e8d9;color:#46554a}
     @media(max-width:850px){
       .navlinks{display:none}.hero-grid{grid-template-columns:1fr;gap:40px}.hero{padding-top:38px}
       .cards,.pricing-grid{grid-template-columns:1fr}.card{min-height:auto}.process{grid-template-columns:1fr;gap:28px}
@@ -113,7 +133,7 @@
     }
     @media(max-width:520px){.wrap{width:min(100% - 30px,1160px)}.nav{height:70px}.hero{padding-bottom:55px}
       .hero-actions .button{width:100%}.dashboard{padding:17px}.metric strong{font-size:1.5rem}.section{padding:62px 0}
-      .cta{padding:25px}.footer-inner{align-items:flex-start;flex-direction:column}.footer-links{flex-wrap:wrap}
+      .cta{padding:25px}.footer-inner{align-items:flex-start;flex-direction:column}.footer-links{flex-wrap:wrap}.form-grid{grid-template-columns:1fr}.form-actions .button{width:100%}
     }
   </style>
 </head>
@@ -133,8 +153,8 @@
       <div class="wrap hero-grid">
         <div>
           <div class="eyebrow">Customer experience, made actionable</div>
-          <h1>Make every customer moment <span>count.</span></h1>
-          <p class="hero-copy">We help growing businesses spot customer friction, understand what people are really saying, and turn insight into practical actions — with a smarter mix of CX expertise and AI.</p>
+          <h1>Turn guest feedback into your <span>next best move.</span></h1>
+          <p class="hero-copy">We help hotels and restaurants collect and analyse customer feedback, spot what matters most, and turn everyday feedback into better guest experiences.</p>
           <div class="hero-actions">
             <a class="button button-dark" href="#contact">Get your CX snapshot <span aria-hidden="true">→</span></a>
             <a class="button button-light" href="#offerings">Explore the offerings</a>
@@ -142,17 +162,23 @@
           <div class="microcopy">Practical insight. Clear priorities. No enterprise-sized project required.</div>
         </div>
         <div class="dashboard" aria-label="Illustrative customer experience insights dashboard">
-          <div class="dash-top"><div><div class="dash-label">LOYALTY SHIFT INTELLIGENCE</div><strong>Weekly CX pulse</strong></div><div class="live">Illustrative preview</div></div>
-          <div class="dash-title">Your customer signals, decoded.</div>
-          <div class="dash-sub">A sample of what a useful weekly briefing could surface.</div>
+          <div class="dash-title">Hospitality guest experience</div>
+          <div class="dash-sub">Illustrative hotel &amp; restaurant feedback sample · not live client data</div>
           <div class="metric-row">
-            <div class="metric"><small>Review themes</small><strong>04</strong><span class="trend">Patterns to explore</span></div>
-            <div class="metric"><small>Priority actions</small><strong>03</strong><span class="trend">Ready for your team</span></div>
+            <div class="metric"><small>Reviews analysed</small><strong>1,284</strong><span class="trend">Sample reporting period</span></div>
+            <div class="metric"><small>Overall sentiment</small><strong>82%</strong><span class="trend">Positive mentions in sample</span></div>
+          </div>
+          <div class="topic-panel">
+            <div class="topic-heading">What guests are talking about</div>
+            <div class="topic"><span>Staff friendliness</span><span class="topic-track"><i style="width:91%"></i></span><b>91%</b></div>
+            <div class="topic"><span>Food &amp; drink quality</span><span class="topic-track"><i style="width:84%"></i></span><b>84%</b></div>
+            <div class="topic"><span>Room / venue cleanliness</span><span class="topic-track"><i style="width:78%"></i></span><b>78%</b></div>
+            <div class="topic"><span>Waiting time concerns</span><span class="topic-track concern"><i style="width:37%"></i></span><b>37%</b></div>
           </div>
           <div class="signal-list">
-            <div class="signal"><div class="signal-icon">↗</div><div><strong>Customers mention slow replies</strong><span>Recurring theme across recent feedback</span></div></div>
-            <div class="signal"><div class="signal-icon">◎</div><div><strong>A journey step may be causing drop-off</strong><span>Review the booking or enquiry path</span></div></div>
-            <div class="signal"><div class="signal-icon">✦</div><div><strong>One quick win to test this week</strong><span>Clarify response times and next steps</span></div></div>
+            <div class="signal"><div class="signal-icon">↗</div><div><strong>Service warmth is a strength</strong><span>Guests repeatedly praise attentive, friendly teams</span></div></div>
+            <div class="signal"><div class="signal-icon">◎</div><div><strong>Waiting times are the clearest friction point</strong><span>Check peak periods, table turns and check-in queues</span></div></div>
+            <div class="signal"><div class="signal-icon">✦</div><div><strong>Suggested quick win</strong><span>Set clearer wait-time expectations and update guests proactively</span></div></div>
           </div>
         </div>
       </div>
@@ -163,14 +189,14 @@
         <div class="section-head">
           <div class="eyebrow">What we do</div>
           <h2>From customer signals to smarter decisions.</h2>
-          <p>Choose a focused starting point or build towards continuous insight. Every offer is designed to make customer experience easier to understand — and easier to improve.</p>
+          <p>We make the voice of your guests easier to collect, understand and act on without getting lost in a sea of comments and ratings.</p>
         </div>
         <div class="cards">
           <article class="card">
             <div class="card-icon">⌕</div>
-            <h3>AI CX Snapshot</h3>
-            <p>A practical one-off review of your digital customer journey, public feedback and obvious points of friction.</p>
-            <ul><li>Website and journey review</li><li>Feedback themes and friction points</li><li>Prioritised action plan</li></ul>
+            <h3>CX Snapshot</h3>
+            <p>A practical one-off review of your current customer experience strategy, customer journeys and potential points of friction.</p>
+            <ul><li>Customer journey review</li><li>Identify listening posts</li><li>Create action plan</li></ul>
             <a class="card-link" href="#pricing">Explore snapshot pricing →</a>
           </article>
           <article class="card featured">
@@ -203,15 +229,15 @@
             <div class="plan">One-off</div>
             <div class="price">€199 <small>/ review</small></div>
             <p class="price-desc">For a business that wants a clearer view of its customer experience.</p>
-            <ul><li>Focused digital CX snapshot</li><li>Key friction points and themes</li><li>Prioritised recommendations</li><li>Short online walkthrough</li></ul>
+            <ul><li>Review existing CX strategy </li><li>Identify key customer journeys</li><li>Highlight potenial friction points</li><li>Create recommendations proposal</li><li>Presentation walkthrough</li></ul>
             <a class="button button-light" href="#contact">Request a snapshot</a>
           </article>
           <article class="price-card popular">
             <span class="popular-tag">Recommended starting point</span>
             <div class="plan">Monthly</div>
             <div class="price">€79 <small>/ month</small></div>
-            <p class="price-desc">For teams that want a regular pulse on public feedback and customer friction.</p>
-            <ul><li>Scheduled CX briefing</li><li>Review-theme summaries, where accessible</li><li>Changes and patterns to investigate</li><li>Practical suggested actions</li></ul>
+            <p class="price-desc">For companies with an existing customer listening program that want a regular pulse on public feedback and customer friction.</p>
+            <ul><li>Scheduled CX insights via email</li><li>Review-theme summaries, where accessible</li><li>Changes and patterns to investigate</li><li>Practical suggested actions</li></ul>
             <a class="button button-dark" href="#contact">Discuss monitoring</a>
           </article>
           <article class="price-card">
@@ -254,8 +280,8 @@
       <div class="wrap faq">
         <div><div class="eyebrow">Good to know</div><h2>A few questions, answered.</h2><p style="color:var(--muted)">Not sure which option fits? Start with a short conversation and we’ll work out the smallest useful next step.</p></div>
         <div>
-          <details><summary>Is this a fully automated AI service?</summary><p>Not necessarily. The aim is to automate repeatable collection and summarisation where practical, while keeping human judgement in the loop for interpretation and recommendations. The exact level of automation depends on the sources and scope.</p></details>
-          <details><summary>What kind of businesses is LoyaltyShift for?</summary><p>We’re initially focused on customer-facing businesses that want a more structured view of feedback and customer journeys. The best fit depends on the volume and accessibility of your customer signals.</p></details>
+          <details><summary>Is this a fully automated AI service?</summary><p>No, it all starts with a personal discovery call either via online meetings or in person. This helps us understand your specific situation and find the best approach for your business. Thereafter, the exact level of automation depends on the initial findings.</p></details>
+          <details><summary>What kind of businesses is do we support?</summary><p>We’re initially focused on customer-facing businesses that want a more structured view of feedback and customer journeys. The best fit depends on the volume and accessibility of your customer signals.</p></details>
           <details><summary>Do you need access to our customer database?</summary><p>Not for a public-data snapshot. Any work involving private customer data or connected systems would be scoped separately, with appropriate permissions, security and privacy safeguards.</p></details>
           <details><summary>Can you promise more loyalty or revenue?</summary><p>No responsible review can promise a specific outcome. We aim to identify evidence-based opportunities and practical improvements, then help you decide what to test and measure.</p></details>
           <details><summary>How do we get started?</summary><p>Use the contact section below to tell us a little about your business and what you want to improve. We’ll respond with a suggested next step.</p></details>
@@ -268,9 +294,18 @@
         <div class="section-head">
           <div class="eyebrow">Start a conversation</div>
           <h2>What would you like to improve?</h2>
-          <p>This demo site uses a simple email-based contact link. Replace the placeholder address with your preferred business email before publishing.</p>
-          <a class="button button-dark" href="mailto:hello@loyaltyshift.com?subject=LoyaltyShift%20enquiry&body=Hi%20LoyaltyShift%2C%0A%0AI%27d%20like%20to%20discuss%3A%0A%0ABusiness%3A%0AMain%20challenge%3A%0A%0AThanks">Email LoyaltyShift <span aria-hidden="true">↗</span></a>
-          <div class="contact-note">Placeholder contact: hello@loyaltyshift.com — confirm that this mailbox exists before launch.</div>
+          <p>Tell us a little about your business and what you would like to improve. The form prepares an email for you to review and send.</p>
+          <form id="contact-form" class="contact-form">
+            <div class="form-grid">
+              <label>Your name<input name="name" autocomplete="name" required placeholder="Name"></label>
+              <label>Work email<input name="email" type="email" autocomplete="email" required placeholder="you@business.com"></label>
+            </div>
+            <label>Business / venue<input name="business" required placeholder="Hotel, restaurant or business name"></label>
+            <label>What would you like to improve?<textarea name="challenge" rows="4" required placeholder="For example: review themes, guest feedback, waiting times or repeat visits"></textarea></label>
+            <div class="form-actions"><button class="button button-dark" type="submit">Prepare email <span aria-hidden="true">↗</span></button><button class="button button-light" type="button" id="copy-enquiry">Copy enquiry instead</button></div>
+            <p id="form-status" class="contact-note" role="status" aria-live="polite">Your message stays on this page until you choose to open your email app or copy it.</p>
+          </form>
+          <div class="contact-note">Email destination: hello@loyaltyshift.com. Confirm this mailbox exists before publishing. If your email app does not open, use “Copy enquiry instead” and send the copied text from your preferred email service.</div>
         </div>
       </div>
     </section>
@@ -283,7 +318,44 @@
       <div class="footer-links"><a href="#offerings">Offerings</a><a href="#pricing">Pricing</a><a href="#contact">Contact</a></div>
     </div>
   </footer>
-  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    (function () {
+      const form = document.getElementById('contact-form');
+      const status = document.getElementById('form-status');
+      const copyButton = document.getElementById('copy-enquiry');
+      const destination = 'hello@loyaltyshift.com';
+      function getMessage() {
+        const data = new FormData(form);
+        return ['Hi LoyaltyShift,', '', 'I would like to discuss improving customer experience.', '',
+          'Name: ' + (data.get('name') || ''), 'Email: ' + (data.get('email') || ''),
+          'Business / venue: ' + (data.get('business') || ''), '', 'What I would like to improve:',
+          data.get('challenge') || '', '', 'Thanks'].join('\n');
+      }
+      async function copyMessage() {
+        if (!form.reportValidity()) return;
+        const message = getMessage();
+        try {
+          await navigator.clipboard.writeText(message);
+          status.textContent = 'Enquiry copied. Open your email service, address it to ' + destination + ', and paste the message.';
+        } catch (error) {
+          const helper = document.createElement('textarea'); helper.value = message;
+          helper.setAttribute('readonly', ''); helper.style.position = 'fixed'; helper.style.opacity = '0';
+          document.body.appendChild(helper); helper.select();
+          const copied = document.execCommand('copy'); helper.remove();
+          status.textContent = copied ? 'Enquiry copied. Open your email service, address it to ' + destination + ', and paste the message.' : 'Copy was blocked by your browser. Please copy the enquiry text manually.';
+          if (!copied) window.prompt('Copy your enquiry text:', message);
+        }
+      }
+      form.addEventListener('submit', function (event) {
+        event.preventDefault(); if (!form.reportValidity()) return;
+        const subject = 'LoyaltyShift enquiry from ' + (new FormData(form).get('name') || 'website visitor');
+        const mailto = 'mailto:' + destination + '?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(getMessage());
+        status.textContent = 'Your email app should open with a draft addressed to ' + destination + '. If it does not open, choose “Copy enquiry instead”. The message has not been sent yet.';
+        window.location.href = mailto;
+      });
+      copyButton.addEventListener('click', copyMessage);
+    })();
+  </script>
 </body>
 </html>
-
